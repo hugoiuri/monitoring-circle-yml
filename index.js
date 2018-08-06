@@ -10,14 +10,20 @@ const baseUrl = 'https://api.bitbucket.org/2.0';
 const options = {
   url: `${baseUrl}/repositories/${team}`,
   headers: {
-    Authorization: auth
+    Authorization: auth,
+    'Content-Type': 'application/json'
   }
 }
 
-request(options, (err, res, body) => {
+request(options, (err, res) => {
   if (err) {
     console.log(err)
   } else {
-    console.log(body)
+    const data = JSON.parse(res.body)
+    data.values.forEach(repo => {
+      console.log(repo.name)
+    });
   }
 });
+
+
