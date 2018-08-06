@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hugoiuri/monitoring-source-code/issues"
   },
-  "homepage": "https://github.com/hugoiuri/monitoring-source-code#readme"
+  "homepage": "https://github.com/hugoiuri/monitoring-source-code#readme",
+  "dependencies": {
+    "request": "^2.87.0"
+  }
 }
